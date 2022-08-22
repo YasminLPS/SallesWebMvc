@@ -1,6 +1,6 @@
 using System;
 
-namespace SallesWebMvc.Models
+namespace SallesWebMvc.Models.ViewsModels
 {
     public class ErrorViewModel
     {
