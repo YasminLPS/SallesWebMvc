@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Globalization;
+using System.ComponentModel.DataAnnotations;
 
 namespace SallesWebMvc.Models
 {
@@ -9,7 +10,14 @@ namespace SallesWebMvc.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        [Display(Name = "Birth Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}")]
         public DateTime BirthDate { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [Display(Name = "Base Salary")]
         public double BaseSalary { get; set; }
         public Department Department { get; set; }
         public int DepartmentId { get; set; }
