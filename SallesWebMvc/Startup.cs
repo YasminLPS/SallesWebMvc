@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SallesWebMvc.Models;
 using SallesWebMvc.Data;
+using SallesWebMvc.Services;
 
 namespace SallesWebMvc
 {
@@ -43,6 +44,7 @@ namespace SallesWebMvc
 
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
