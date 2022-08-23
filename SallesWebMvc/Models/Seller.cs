@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Globalization;
 
 namespace SallesWebMvc.Models
 {
@@ -17,12 +18,13 @@ namespace SallesWebMvc.Models
         {
         }
 
-        public Seller(int id, string name, DateTime birthDate, double baseSalary)
+        public Seller(int id, string name, DateTime birthDate, double baseSalary, Department department)
         {
             Id = id;
             Name = name;
             BirthDate = birthDate;
             BaseSalary = baseSalary;
+            Department = department;
         }
 
         public void AddSales(SalesRecord sr) 
